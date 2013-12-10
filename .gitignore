@@ -1,2 +1,4 @@
 # OS X
 .DS_Store
+.idea/
+phonegap-position-logger.iml
