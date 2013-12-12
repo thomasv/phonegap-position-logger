@@ -16,36 +16,28 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var app = {
+var App = (function (app) {
 
-    initialize: function() {
-        this.bindEvents();
-    },
+    app.Main = (function () {
 
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-
-    onDeviceReady: function() {
-        navigator.geolocation.getCurrentPosition(app.geolocation.onSuccess, app.geolocation.onError);
-    },
-
-    geolocation: {
-        onSuccess: function (position) {
-            var element = document.getElementById('geolocation');
-            element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-                'Longitude: '          + position.coords.longitude             + '<br />' +
-                'Altitude: '           + position.coords.altitude              + '<br />' +
-                'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                'Heading: '            + position.coords.heading               + '<br />' +
-                'Speed: '              + position.coords.speed                 + '<br />' +
-                'Timestamp: '          + position.timestamp                    + '<br />';
-        },
-        
-        onError: function (error) {
-            alert('code: '    + error.code    + '\n' +
-                'message: ' + error.message + '\n');
+        function onDeviceReady() {
+            App.Geolocation.requestPosition();
         }
-    }
-};
+
+        function init() {
+            document.addEventListener('deviceready', onDeviceReady, false);
+        }
+
+        return {
+            init: init
+        };
+    }());
+
+    return app;
+
+}(App || {}));
+
+$(function () {
+    App.Main.init();
+});
+
