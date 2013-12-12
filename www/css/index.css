@@ -105,6 +105,7 @@ h1 {
 }
 
 .request {
+    display: none;
     background: #eff934;
     position: absolute;
     right: 0;
