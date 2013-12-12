@@ -1,18 +1,25 @@
-var App = (function (app) {
+var App = (function (app, $) {
 
     app.Geolocation = (function () {
 
+        function formatDate(d) {
+            return d.toLocaleDateString() + ', ' + d.toLocaleTimeString();
+        }
+
         function onRequestSuccess(position) {
-            var element = document.getElementById('geolocation');
-            element.innerHTML =
-                'Latitude: '           + position.coords.latitude              + '<br />' +
-                'Longitude: '          + position.coords.longitude             + '<br />' +
-                'Altitude: '           + position.coords.altitude              + '<br />' +
-                'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                'Heading: '            + position.coords.heading               + '<br />' +
-                'Speed: '              + position.coords.speed                 + '<br />' +
-                'Timestamp: '          + position.timestamp                    + '<br />';
+            var container = $('.geolocation'),
+                date = new Date(position.timestamp);
+
+            $('.geolocation .request').hide();
+
+            $('.latitude', container).text(position.coords.latitude);
+            $('.longitude', container).text(position.coords.longitude);
+            $('.accuracy', container).text(position.coords.accuracy);
+            $('.altitude', container).text(position.coords.altitude);
+            $('.altitudeAccuracy', container).text(position.coords.altitudeAccuracy);
+            $('.heading', container).text(position.coords.heading);
+            $('.speed', container).text(position.coords.speed);
+            $('.time', container).text(formatDate(date));
         }
 
         function onRequestError(error) {
@@ -21,6 +28,7 @@ var App = (function (app) {
         }
 
         function requestPosition() {
+            $('.geolocation .request').show();
             navigator.geolocation.getCurrentPosition(onRequestSuccess, onRequestError);
         }
 
@@ -30,5 +38,5 @@ var App = (function (app) {
     }());
 
     return app;
-}(App || {}));
+}(App || {}, jQuery));
 

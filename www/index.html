@@ -26,7 +26,21 @@
         <title>Hello World</title>
     </head>
     <body>
-        <p id="geolocation">Finding geolocation...</p>
+        <div class="widget geolocation">
+            <h1>Geolocation</h1>
+            <p class="request blink">requesting...</p>
+            <ul>
+                <li><span class="label">Latitude</span><span class="value latitude"></span></li>
+                <li><span class="label">Longitude</span><span class="value longitude"></span></li>
+                <li><span class="label">Accuracy</span><span class="value accuracy"></span></li>
+                <li><span class="label">Altitude</span><span class="value altitude"></span></li>
+                <li><span class="label">Altitude Accuracy</span><span class="value altitudeAccuracy"></span></li>
+                <li><span class="label">Heading</span><span class="value heading"></span></li>
+                <li><span class="label">Speed</span><span class="value speed"></span></li>
+                <li><span class="label">Time</span><span class="value time"></span></li>
+            </ul>
+        </div>
+
         <script type="text/javascript" src="phonegap.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script type="text/javascript" src="js/geolocation.js"></script>

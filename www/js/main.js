@@ -20,8 +20,16 @@ var App = (function (app) {
 
     app.Main = (function () {
 
-        function onDeviceReady() {
+        // time in ms
+        var updateInterval = 10000;
+
+        function track() {
             App.Geolocation.requestPosition();
+        }
+
+        function onDeviceReady() {
+            track();
+            setInterval(track, updateInterval);
         }
 
         function init() {
