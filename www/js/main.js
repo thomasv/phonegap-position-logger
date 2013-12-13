@@ -45,4 +45,6 @@ var App = (function (app) {
 
 }(App || {}));
 
-App.Main.init();
+$(function () {
+    App.Main.init();
+});
