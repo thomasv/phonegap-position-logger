@@ -94,13 +94,13 @@ h1 {
 }
 
 .widget {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
 }
 
 .geolocation .label {
-    width: 10rem;
+    width: 9rem;
     display: inline-block;
 }
 

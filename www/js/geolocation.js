@@ -3,7 +3,7 @@ var App = (function (app, $) {
     app.Geolocation = (function () {
 
         function formatDate(d) {
-            return d.toLocaleDateString() + ', ' + d.toLocaleTimeString();
+            return d.toLocaleTimeString();
         }
 
         function onRequestSuccess(position) {
