@@ -1,4 +1,5 @@
 # OS X
 .DS_Store
-.idea/
-phonegap-position-logger.iml
+
+# intellij workspace file
+phonegap-position-logger.iws
