@@ -3,7 +3,7 @@ phonegap-position-logger
 
 A logging app showing the GPS latitude/longitude and WiFi accespoints created with phonegap.
 
-> Basic app structure from [phonegap-start][phonegap-start]
+> Basic app structure from [phonegap-start](http://github.com/phonegap/phonegap-start)
 
 ## Setup
 
@@ -63,12 +63,19 @@ to `true` when running on emulator (see `www/js/geolocation.js`)_
 
 ### Run application on device (Android)
 
+Either:
+
 1. Build app
 
         phonegap local build android
 
 2. Copy file `platforms/android/bin/PositionLogger-debug.apk` to your phone and install
 
-[cordova-app]: http://github.com/apache/cordova-app-hello-world
-[phonegap-start]: http://github.com/phonegap/phonegap-start
+Or:
+
+1. Connect device to your machine and [configure device](http://developer.android.com/tools/device.html).
+
+2. Install app on device
+
+        phonegap local run android --device
 
