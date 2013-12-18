@@ -23,6 +23,8 @@ var App = (function (app, $) {
         }
 
         function onRequestError(error) {
+            $('.geolocation .request').hide();
+
             alert('code: '    + error.code    + '\n' +
                 'message: ' + error.message + '\n');
         }
