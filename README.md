@@ -25,14 +25,22 @@ If `npm` doesn't work, [install latest nodejs](http://nodejs.org).
 
 ### Run application on emulator (Android)
 
+**Important**: _For geolocation the option `enableHighAccuracy` in function call `navigator.geolocation.getCurrentPosition` must be set
+to `true` when running on emulator (see `www/js/geolocation.js`)_
+
 1. Start emulator
 
-2. Set latitude and longitude for emulator
+2. Set latitude and longitude for emulator (i.e. lat 50, lon 9)
 
         telnet localhost 5554
-        geo fix 50.0 9.0
+        geo fix 50 9
 
-3. Compile application and install on emulator
+3. Set orientation for emulator (i.e. 135 degress for south east orientation)
+
+        telnet localhost 5554
+        sensor set orientation 135:0:0
+
+4. Compile application and install on emulator
 
         phonegap local run android
 

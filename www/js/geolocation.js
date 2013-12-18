@@ -33,7 +33,9 @@ var App = (function (app, $) {
 
         function requestPosition() {
             $('.geolocation .request').show();
-            navigator.geolocation.getCurrentPosition(onRequestSuccess, onRequestError);
+            navigator.geolocation.getCurrentPosition(onRequestSuccess, onRequestError, {
+                enableHighAccuracy: false
+            });
         }
 
         return {
