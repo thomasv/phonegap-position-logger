@@ -20,6 +20,16 @@ A logging app showing the GPS latitude/longitude and WiFi accespoints created wi
 
 If `npm` doesn't work, [install latest nodejs](http://nodejs.org).
 
+### cordova.js
+
+For development on desktop browser include `cordova.js` locally into the project.
+
+1. Build the app (Android)
+
+        phonegap local build android
+
+2.  Copy file `platforms/android/assets/www/cordova.js` to `www` directory.
+
 
 ## Usage
 
@@ -38,7 +48,7 @@ to `true` when running on emulator (see `www/js/geolocation.js`)_
 3. Set orientation for emulator (i.e. 135 degress for south east orientation)
 
         telnet localhost 5554
-        sensor set orientation 135:0:0
+        sensor set orientation 135
 
 4. Compile application and install on emulator
 
