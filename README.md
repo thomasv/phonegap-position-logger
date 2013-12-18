@@ -5,49 +5,44 @@ A logging app showing the GPS latitude/longitude and WiFi accespoints created wi
 
 > Basic app structure from [phonegap-start][phonegap-start]
 
+## Setup
+
+### Requirements
+
+- Java JDK 1.5 or greater
+- Apache ANT 1.8.0 or greater
+- Android SDK [http://developer.android.com](http://developer.android.com)
+
+
+### Install phonegap
+
+    npm install -g phonegap
+
+If `npm` doesn't work, [install latest nodejs](http://nodejs.org).
+
+
 ## Usage
 
-### Run Application
+### Run application on emulator (Android)
 
-    /www/index.html
+1. Start emulator
 
-### Run Tests
+2. Set latitude and longitude for emulator
 
-    /www/spec.html
+        telnet localhost 5554
+        geo fix 50.0 9.0
 
-### PhoneGap/Build
+3. Compile application and install on emulator
 
-Create a new app with the following repository:
+        phonegap local run android
 
-    https://github.com/phonegap/phonegap-start.git
+### Run application on device (Android)
 
-## Updating the Application
+1. Build app
 
-The application is based on the [Apache Cordova Hello World][cordova-app] app.
+        phonegap local build android
 
-### 1. Update the Source
-
-    cp cordova-app-hello-world/www www/
-
-__Do not replace `www/config.xml`.__
-
-__Do not replace `www/img/logo.png`.__
-
-### 2. Update index.html
-
-Replace `<h1>Apache Cordova</h1>` with `<h1>PhoneGap</h1>`.
-
-### 3. Update PhoneGap Version
-
-    <preference name="phonegap-version" value="x.x.x" />
-
-### 4. Commit
-
-    $ git commit -am "Version x.x.x"
-
-### 5. Tag
-
-    $ git tag x.x.x
+2. Copy file `platforms/android/bin/PositionLogger-debug.apk` to your phone and install
 
 [cordova-app]: http://github.com/apache/cordova-app-hello-world
 [phonegap-start]: http://github.com/phonegap/phonegap-start
