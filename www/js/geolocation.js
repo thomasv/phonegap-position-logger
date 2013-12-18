@@ -1,5 +1,7 @@
 var App = (function (app, $) {
 
+    'use strict';
+
     app.Geolocation = (function () {
 
         function formatDate(d) {

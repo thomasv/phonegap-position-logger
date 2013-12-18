@@ -18,6 +18,8 @@
  */
 var App = (function (app) {
 
+    'use strict';
+
     app.Main = (function () {
 
         // time in ms
@@ -45,6 +47,7 @@ var App = (function (app) {
 
 }(App || {}));
 
-$(function () {
+jQuery(function () {
+    'use strict';
     App.Main.init();
 });
