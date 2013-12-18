@@ -20,7 +20,14 @@ A logging app showing the GPS latitude/longitude and WiFi accespoints created wi
 
 If `npm` doesn't work, [install latest nodejs](http://nodejs.org).
 
-### cordova.js
+### Install required plugins
+
+The app uses the following plugins that must be installed locally
+
+    phonegap local plugin add org.apache.cordova.device-orientation
+    phonegap local plugin add org.apache.cordova.geolocation
+
+### Copy cordova.js to local project
 
 For development on desktop browser include `cordova.js` locally into the project.
 
