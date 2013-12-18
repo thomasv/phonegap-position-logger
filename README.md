@@ -52,7 +52,7 @@ to `true` when running on emulator (see `www/js/geolocation.js`)_
 
 4. Compile application and install on emulator
 
-        phonegap local run android
+        phonegap local run android --emulator
 
 ### Run application on device (Android)
 
