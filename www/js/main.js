@@ -32,6 +32,8 @@ var App = (function (app) {
         function onDeviceReady() {
             track();
             setInterval(track, updateInterval);
+
+            App.Compass.startRequesting();
         }
 
         function init() {

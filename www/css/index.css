@@ -99,7 +99,7 @@ h1 {
     position: relative;
 }
 
-.geolocation .label {
+.widget .label {
     width: 9rem;
     display: inline-block;
 }
