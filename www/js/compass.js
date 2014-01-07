@@ -52,9 +52,7 @@ var App = (function (app, $) {
 
         function onRequestError(error) {
             $('.compass .request').hide();
-
-            alert('code: '    + error.code    + '\n' +
-                'message: ' + error.message + '\n');
+            $('.compass .error').text('code: ' + error.code  + '; message: ' + error.message);
         }
 
         function startRequesting() {
