@@ -27,17 +27,6 @@ The app uses the following plugins that must be installed locally
     phonegap local plugin add org.apache.cordova.device-orientation
     phonegap local plugin add org.apache.cordova.geolocation
 
-### Copy cordova.js to local project
-
-For development on desktop browser include `cordova.js` locally into the project.
-
-1. Build the app (Android)
-
-        phonegap local build android
-
-2.  Copy file `platforms/android/assets/www/cordova.js` to `www` directory.
-
-
 ## Usage
 
 ### Run application on emulator (Android)
